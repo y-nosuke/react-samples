@@ -1,5 +1,7 @@
-function App() {
-  return <div></div>;
+export default function App() {
+  return (
+    <div>
+      <h1>Bookkeeper!</h1>
+    </div>
+  );
 }
-
-export default App;
