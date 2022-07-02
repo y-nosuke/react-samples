@@ -9,28 +9,19 @@ export function App() {
           padding: "1rem",
         }}
       >
-        <NavLink
-          style={({ isActive }: { isActive: boolean }) => ({
-            display: "block",
-            margin: "1rem 0",
-            color: isActive ? "red" : "",
-          })}
-          to={"/verticalBarChart"}
-          key={1}
-        >
-          verticalBarChart
-        </NavLink>
-        <NavLink
-          style={({ isActive }: { isActive: boolean }) => ({
-            display: "block",
-            margin: "1rem 0",
-            color: isActive ? "red" : "",
-          })}
-          to={"/lineChart"}
-          key={0}
-        >
-          lineChart
-        </NavLink>
+        {["verticalBarChart", "lineChart"].map((path) => (
+          <NavLink
+            style={({ isActive }: { isActive: boolean }) => ({
+              display: "block",
+              margin: "1rem 0",
+              color: isActive ? "red" : "",
+            })}
+            to={`/${path}`}
+            key={path}
+          >
+            {path}
+          </NavLink>
+        ))}
       </nav>
       <div style={{ width: "100%" }}>
         <Outlet />
