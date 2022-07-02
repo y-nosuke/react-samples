@@ -15,6 +15,17 @@ export function App() {
             margin: "1rem 0",
             color: isActive ? "red" : "",
           })}
+          to={"/verticalBarChart"}
+          key={1}
+        >
+          verticalBarChart
+        </NavLink>
+        <NavLink
+          style={({ isActive }: { isActive: boolean }) => ({
+            display: "block",
+            margin: "1rem 0",
+            color: isActive ? "red" : "",
+          })}
           to={"/lineChart"}
           key={0}
         >

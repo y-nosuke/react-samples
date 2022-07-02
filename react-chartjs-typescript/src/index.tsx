@@ -23,6 +23,7 @@ root.render(
               </main>
             }
           />
+          <Route path="verticalBarChart" element={<VerticalBarChart />} />
           <Route path="lineChart" element={<LineChart />} />
         </Route>
       </Routes>
