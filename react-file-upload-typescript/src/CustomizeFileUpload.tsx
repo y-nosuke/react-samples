@@ -11,12 +11,12 @@ function CustomizeFileUpload() {
     // e.target.value = "";
   };
 
-  const fileUpload = () => {
+  const selectFiles = () => {
     console.log(inputRef.current);
     inputRef.current?.click();
   };
 
-  const resetFile = () => {
+  const resetFiles = () => {
     setFiles([]);
   };
 
@@ -45,8 +45,8 @@ function CustomizeFileUpload() {
         </table>
       </div>
 
-      <button onClick={fileUpload}>ファイルアップロード</button>
-      <button onClick={resetFile}>リセット</button>
+      <button onClick={selectFiles}>ファイルアップロード</button>
+      <button onClick={resetFiles}>リセット</button>
       <input
         hidden
         ref={inputRef}
